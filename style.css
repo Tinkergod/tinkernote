@@ -1,0 +1,22 @@
+#text_box {
+  width: 660px;
+  height: 310px;
+  font-size: 16px;
+  font-family: 'Courier New';
+  background: hsl(55,80%,95%);
+  border:none;
+  outline:none;
+  border-radius: 2.5px;
+  padding:10px;
+  margin:0px;
+}
+
+.horizontal_container {
+  height:350px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(175, 80%, 15%);
+  padding:0px;
+  margin:0px;
+}
