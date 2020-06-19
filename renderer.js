@@ -10,7 +10,7 @@ const {ipcRenderer} = require('electron');
 
 let executeCommandInput = function(key_event) {
   let user_input = document.getElementById("text_box").value;
-  if (key_event.keyCode == 13) {
+  if (key_event.keyCode == 13 && !key_event.shiftKey) {
     ipcRenderer.send('execute-user-command', user_input);
   }
 }
