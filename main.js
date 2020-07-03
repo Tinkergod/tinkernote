@@ -4,6 +4,7 @@ const path = require('path')
 const process = require('process');
 const {ipcMain} = require('electron');
 var exec = require('child_process').exec, child;
+require('v8-compile-cache')
 
 function createWindow () {
   // Create the browser window.
@@ -56,3 +57,9 @@ ipcMain.on('execute-user-command', (event, arg) => {
   console.log(arg.slice(0, arg.length - 1))
   app.exit(0);
 })
+
+ipcMain.on('quit', (event) => {
+  app.exit(0);
+})
+
+

@@ -14,8 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('DOMContentLoaded', () => {
   var remote = require('electron').remote, args = remote.getGlobal('sharedObject').prop1;
   if (args.length >= 1) {
-    document.getElementById("text_box").setAttribute("placeholder", args[1]);
+    document.querySelector("#text_box").setAttribute("placeholder", args[1]);
   } else {
-    document.getElementById("message_query").innerHTML="Enter text"
+    document.querySelector("#message_query").innerHTML="Enter text"
   }
 })
